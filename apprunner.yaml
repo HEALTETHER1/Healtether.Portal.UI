@@ -4,8 +4,8 @@ runtime: nodejs18
 build:
  commands:
   build:
-   -npm install
-   -npm run build
+   - npm install
+   - npm run build
 
 run:
  commands: npx serve -s build
