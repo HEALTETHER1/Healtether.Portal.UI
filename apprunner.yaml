@@ -3,9 +3,10 @@ runtime: nodejs18
 
 build:
  commands:
-  -npm ci
-  -npm run build
+  build:
+   -npm install
+   -npm run build
 
 run:
  commands: npx serve -s build
- port: 3000
+
