@@ -3,10 +3,11 @@ runtime: nodejs18
 
 build:
  commands:
-  build:
+  pre-build:
    - npm install
+  build:
    - npm run build
 
 run:
- command: npx serve -s build
+ command: npx serve -s dist
 
