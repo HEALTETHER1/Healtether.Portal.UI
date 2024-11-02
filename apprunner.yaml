@@ -1,0 +1,11 @@
+version: 1.0
+runtime: nodejs18
+
+build:
+ commands:
+  -npm ci
+  -npm run build
+
+run:
+ commands: npx serve -s build
+ port: 8080
