@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Montserrat";
+    font-size: 14.5px;
+    color: #202741;
+    height:100%;
+  }
+  #detail{
+    font-size: 15px;
+  }
+  option:hover {
+    background-color: aqua;
+    color:white;
+  }
+  .assoc-symptom-blur{
+    filter: blur(5px);
+  }
+
+
+}
+@layer utilities {
+  body::-webkit-scrollbar,div::-webkit-scrollbar {
+    width: 3px;
+    height: 8px;
+  }
+
+  body::-webkit-scrollbar-track,div::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background:transparent;
+  }
+
+  body::-webkit-scrollbar-thumb,div::-webkit-scrollbar-thumb {
+    background:#6D6D6D;
+    border-radius: 50vh;
+    border: 0.5px solid #6D6D6D ;
+    max-height: 80%;
+  }
+
+  body::-webkit-scrollbar-thumb:hover,div::-webkit-scrollbar-thumb:hover {
+    background:  #F5F5F5;
+  }
+
+  *::placeholder { /* Most modern browsers support this now. */
+    color: #6D6D6D;
+ }
+}
+:root {
+  --toastify-icon-color-success:#32856E !important;
+}
+#error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .Toastify__progress-bar--success {
+    background-color: #32856E !important;
+    color:#32856E  !important;
+  }
+
+  .Toastify__progress-bar--info {
+    background-color:#5351C7 !important;
+    color:#5351C7 !important;
+  }
+
+  .Toastify__toast-theme--light {
+    background:#F7F4FA !important;
+    color:#202741;
+  }
