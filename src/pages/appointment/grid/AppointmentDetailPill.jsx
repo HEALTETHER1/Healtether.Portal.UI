@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 
 export function AppointmentDetailPill({ value, column, row }) {
+
+
+
   return (
     <div className="flex flex-col text-TextPrimary">
       <div className="text-sm font-normal mb-px">
@@ -14,7 +17,13 @@ export function AppointmentDetailPill({ value, column, row }) {
       {row.original["virtualConsultation"] ? (
         <div className="flex flex-row justify-center text-xs font-base text-TextSecondary">
           <span className="icon-[mdi--circle] text-xs bg-red-400"></span>
-          &nbsp;Virtual Consultation
+          &nbsp; <span className="cursor-pointer font-medium" onClick={(e)=>
+          {
+            e.preventDefault();
+            window.open(row.original?.googleLink?.link,'_blank', 'rel=noopener noreferrer');
+            e.stopPropagation();
+          }
+          }>Start Virtual Consultation</span>
         </div>
       ) : null}
     </div>
